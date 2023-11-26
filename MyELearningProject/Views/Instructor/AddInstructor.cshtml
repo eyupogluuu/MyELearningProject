@@ -1,0 +1,23 @@
+﻿@model MyELearningProject.DAL.Entities.Instructor
+@{
+    ViewBag.Title = "AddInstructor";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2 class="card-header"> Eğitmen Ekle </h2>
+<br />
+<br />
+<form method="post">
+    <label> Adı :</label>
+    @Html.TextBoxFor(x => x.name, new { @class = "form-control" })
+    <br /><br />
+    <label>Soyadı:</label>
+    @Html.TextBoxFor(x => x.name, new { @class = "form-control" })
+    <br /><br />
+    <label> Görsel:  </label>
+    @Html.TextBoxFor(x => x.imageUrl, new { @class = "form-control" })
+    <br /><br />
+    <button class="btn-primary"> Kaydet</button>
+
+</form>
+

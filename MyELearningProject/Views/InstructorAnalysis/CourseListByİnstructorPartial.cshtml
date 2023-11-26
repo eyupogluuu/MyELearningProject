@@ -1,0 +1,28 @@
+﻿@model List<MyELearningProject.DAL.Entities.Course>
+
+    
+<div class="tab-pane" id="settings" role="tabpanel">
+    <div class="card-block">
+        @foreach (var c in Model)
+        {
+
+
+        <div class="sl-item">
+            @*<div class="sl-left"> <img src="~/Templates/material-lite-master/assets/images/users/2.jpg" alt="user" class="img-circle"> </div>*@
+            <div class="sl-right">
+                <div>
+                    <a href="#" class="link">@c.ınstructor.name @c.ınstructor.surname</a> <span class="sl-date">@c.duration% dk</span>
+                    <div class="m-t-20 row">
+                        <div class="col-md-3 col-xs-12"><img src="@c.imageUrl" alt="user" class="img-responsive radius"></div>
+                        <div class="col-md-9 col-xs-12">
+                            <p></p> <a href="#" class="btn btn-success">Kursa Git</a>
+                        </div>
+                    </div>
+                    <div class="like-comm m-t-20"> <a href="javascript:void(0)" class="link m-r-10">@ViewBag.commentCount Adet Yorum Yapıldı</a> <a href="javascript:void(0)" class="link m-r-10"><i class="fa fa-heart text-danger"></i> @ViewBag.avgRating/10</a> </div>
+                </div>
+            </div>
+        </div>
+        }
+        <hr>
+    </div>
+</div>

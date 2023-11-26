@@ -1,0 +1,45 @@
+﻿@model List<MyELearningProject.DAL.Entities.Process>
+
+@{
+    Layout = "~/Views/Shared/_StudentLayout.cshtml";
+    int count = 0;
+}
+
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-block">
+                <h2 class="card-header"> Kurslarım</h2>
+                <br />
+                <table class=" table table-bordered">
+                    <tr>
+                        <th> # </th>
+                        <th> Kurs Adı </th>
+
+                        @foreach (var p in Model)
+                        {
+                            count++;
+                        <tr>
+                            <td>@count</td>
+                            <td>@p.course.tittle</td>
+
+
+                        </tr>
+                    }
+                    </table>
+                  
+                </div>
+            </div>
+        </div>
+    </div>
+    @*<br />
+        table
+        <h2>Kurs Listesi</h2>
+
+        {
+            count++;
+            <p>@count- </p>
+
+        }*@
+
+

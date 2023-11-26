@@ -1,0 +1,42 @@
+﻿@model List<MyELearningProject.DAL.Entities.Course>
+@{
+    ViewBag.Title = "CourseList";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-block">
+                <h2 class="card-header"> Kurs Listesi </h2>
+                <br />
+                <table class=" table table-bordered">
+                    <tr>
+                        <th> # </th>
+                        <th> Kurs Adı </th>
+                        <th> Kurs Açıklama </th>
+                        <th> Kategori </th>
+                        <th> Eğitmen  </th>
+                        <th> Sil </th>
+                        <th> Güncelle </th>
+                    </tr>
+                    @foreach (var c in Model)
+                    {
+                        <tr>
+                            <td>@c.courseID</td>
+                            <td>@c.tittle</td>
+                            <td>@c.descreption</td>
+                            <td>@c.category.categoryName</td>
+                            <td>@c.ınstructor.name @c.ınstructor.surname</td>
+                            <td><a href="/Course/DeleteCourse/@c.courseID" class="btn btn-outline-danger"> Sil </a></td>
+                            <td><a href="/Course/UpdateCourse/@c.courseID" class="btn btn-outline-success"> Güncelle </a></td>
+
+                        </tr>
+                    }
+                </table>
+                <a class="btn btn-outline-secondary" href="/Course/AddCourse/"> Yeni Kurs Ekle</a>
+            </div>
+        </div>
+    </div>
+</div>
+

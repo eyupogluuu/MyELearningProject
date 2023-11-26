@@ -1,0 +1,30 @@
+﻿@model MyELearningProject.DAL.Entities.Course
+@{
+    ViewBag.Title = "AddCourse";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2>Kurs Ekleme Sayfası</h2>
+
+<form method="post">
+    <label>Kurs Adı:</label>
+    @Html.TextBoxFor(x => x.tittle, new { @class = "form-control" })
+    <br /><br />
+    <label>Kurs Fiyat:</label>
+    @Html.TextBoxFor(x => x.price, new { @class = "form-control" })
+    <br /><br />
+    <label>Kurs Sure:</label>
+    @Html.TextBoxFor(x => x.duration, new { @class = "form-control" })
+    <br /><br />
+    <label>Kurs Gorsel:</label>
+    @Html.TextBoxFor(x => x.imageUrl, new { @class = "form-control" })
+    <br /><br />
+    <label>Kategori:</label>
+    @Html.DropDownListFor(x => x.categoryID, (List<SelectListItem>)ViewBag.v, new { @class = "form-control" })
+    <br /><br />
+    <label>Kategori:</label>
+    @Html.DropDownListFor(x => x.instructorID, (List<SelectListItem>)ViewBag.v2, new { @class = "form-control" })
+    <br /><br />
+    <button class="btn-primary">Kaydet</button>
+</form>
+

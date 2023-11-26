@@ -1,0 +1,42 @@
+﻿@model List<MyELearningProject.DAL.Entities.Testimonial>
+@{
+    ViewBag.Title = "TestimonialList";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-block">
+                <h2 class="card-header"> Referans Listesi </h2>
+                <br />
+                <table class=" table table-bordered">
+                    <tr>
+                        <th> # </th>
+                        <th> Referans Adı Soyadı: </th>
+                        <th> Referans Etiketi: </th>
+                        <th> Referans Görsel: </th>
+                        <th> Referans Yorumu: </th>
+                        <th> Sil </th>
+                        <th> Güncelle </th>
+                    </tr>
+                    @foreach (var t in Model)
+                    {
+                <tr>
+                    <td>@t.testimonialID</td>
+                    <td>@t.nameSurname</td>
+                    <td>@t.title</td>
+                    <td>@t.imageUrl</td>
+                    <td>@t.comment</td>
+                    <td><a href="/Testimonial/DeleteTestimonial/@t.testimonialID" class="btn btn-outline-danger"> Sil </a></td>
+                    <td><a href="/Testimonial/UpdateTestimonial/@t.testimonialID" class="btn btn-outline-success"> Güncelle </a></td>
+
+                </tr>
+                    }
+                </table>
+                <a class="btn btn-outline-secondary" href="/Testimonial/AddTestimonial/"> Yeni Referans Ekle</a>
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,26 @@
+﻿@model List<MyELearningProject.DAL.Entities.Comment>
+<div class="tab-pane active" id="home" role="tabpanel">
+    <div class="card-block">
+        <div class="profiletimeline">
+            @foreach (var c in Model)
+            {
+                <div class="sl-item">
+                    <div class="sl-left"> <img src="~/Templates/material-lite-master/assets/images/users/3.jpg" alt="user" class="img-circle"> </div>
+                    <div class="sl-right">
+                        <div>
+                            <a href="#" class="link">@c.student.sname @c.student.ssurname</a> <span class="sl-date">@c.course.tittle - @c.commentDate </span>
+                            <p class="m-t-10">@c.commentText </p>
+                            
+
+                        </div>
+                        
+                    </div>
+                </div>
+                <hr />
+            }
+
+
+
+        </div>
+    </div>
+</div>

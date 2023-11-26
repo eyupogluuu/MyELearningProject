@@ -1,0 +1,33 @@
+﻿@model MyELearningProject.DAL.Entities.Testimonial
+@{
+    ViewBag.Title = "AddTestimonial";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2 class="card-header"> Yeni Referans Ekle </h2>
+<br />
+<form method="post">
+    <label>Referans Adı Soyadı:</label>
+    <br />
+    @Html.TextBoxFor(x => x.nameSurname, new { @class = "form-control" })
+    <br /> <br />
+    <label>Referans Etiketi:</label>
+    <br />
+    @Html.TextBoxFor(x => x.title, new { @class = "form-control" })
+    <br /> <br />
+    <label>Referans Görsel:</label>
+    <br />
+    @Html.TextBoxFor(x => x.imageUrl, new { @class = "form-control" })
+    <br /> <br />
+    <label>Referans Yorumu:</label>
+    <br />
+    @Html.TextBoxFor(x => x.comment, new { @class = "form-control" })
+    <br /> <br />
+    <label>Referans Durum:</label>
+    <br />
+    @Html.TextBoxFor(x => x.status, new { @class = "form-control" })
+    <br /> <br />
+    <button class="btn-primary">Kaydet</button>
+</form>
+
+

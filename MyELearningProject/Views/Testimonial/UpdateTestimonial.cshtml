@@ -1,0 +1,32 @@
+﻿@model MyELearningProject.DAL.Entities.Testimonial
+@{
+    ViewBag.Title = "UpdateTestimonial";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2 class="card-header">  Referans Güncelle </h2>
+<br />
+<br />
+<form method="post">
+    <label>Testimonial ID:</label>
+    @Html.TextBoxFor(x => x.testimonialID, new { @class = "form-control" })
+    <br /><br />
+    <label>Referans Ad Soyad:</label>
+    @Html.TextBoxFor(x => x.nameSurname, new { @class = "form-control" })
+    <br /><br />
+    <label>Referans Etiket:</label>
+    @Html.TextBoxFor(x => x.title, new { @class = "form-control" })
+    <br /><br />
+    <label>Referans Görsel:</label>
+    @Html.TextBoxFor(x => x.imageUrl, new { @class = "form-control" })
+    <br /><br />
+    <label>Referans Yorum:</label>
+    @Html.TextBoxFor(x => x.comment, new { @class = "form-control" })
+    <br /><br />
+    <label>Referans Durum:</label>
+    @Html.TextBoxFor(x => x.status, new { @class = "form-control" })
+    <br /><br />
+    <button class="btn btn-primary">Kaydet</button>
+</form>
+
+

@@ -1,0 +1,37 @@
+﻿@model List<MyELearningProject.DAL.Entities.Review>
+@{
+    ViewBag.Title = "reviewList";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-block">
+                <h2 class="card-header"> Paun Listesi </h2>
+                <br />
+                <table class=" table table-bordered">
+                    <tr>
+                        <th> Kurs Adı</th>
+                        <th> Öğrenci Adı Soyadı</th>
+                        <th> Puan</th>
+                        
+                    </tr>
+                    @foreach (var c in Model)
+                    {
+                        <tr>
+                            <td>@c.course.tittle</td>
+                            <td>@c.student.sname @c.student.sname</td>
+                            <td>@c.ReviewScore</td>
+                            
+                          
+                            
+                        </tr>
+                    }
+                </table>
+                <a class="btn btn-outline-secondary" href="/Review/Addreview/"> Puan Ver</a>
+            </div>
+        </div>
+    </div>
+</div>
