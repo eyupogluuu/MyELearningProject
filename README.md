@@ -17,7 +17,7 @@ SQL Server <br>
 **Ekran Resimleri:**<br>
 
 
-![](https://github.com/eyupogluuu/TatilSeyahatSitesi/blob/master/giriş.PNG)<br> <br>
+![](https://github.com/eyupogluuu/MyELearningProject/Elearning Ekran Kayıtları/contact2.PNG)<br> <br>
 
 
 
