@@ -15,12 +15,14 @@ Entity Framework <br>
 SQL Server <br>
 
 **Ekran Resimleri:**<br>
-
-
+![](https://github.com/eyupogluuu/MyELearningProject/blob/master/Elearning%20Ekran%20Kay%C4%B1tlar%C4%B1/log.PNG)<br> <br>
+![](https://github.com/eyupogluuu/MyELearningProject/blob/master/Elearning%20Ekran%20Kay%C4%B1tlar%C4%B1/header.PNG)<br> <br>
+![](https://github.com/eyupogluuu/MyELearningProject/blob/master/Elearning%20Ekran%20Kay%C4%B1tlar%C4%B1/instructor.PNG)<br> <br>
+![](https://github.com/eyupogluuu/MyELearningProject/blob/master/Elearning%20Ekran%20Kay%C4%B1tlar%C4%B1/services.PNG)<br> <br>
 ![](https://github.com/eyupogluuu/MyELearningProject/blob/master/Elearning%20Ekran%20Kay%C4%B1tlar%C4%B1/contact.PNG)<br> <br>
-
-
-
+![](https://github.com/eyupogluuu/MyELearningProject/blob/master/Elearning%20Ekran%20Kay%C4%B1tlar%C4%B1/testimonia.PNG)<br> <br>
+![](https://github.com/eyupogluuu/MyELearningProject/blob/master/Elearning%20Ekran%20Kay%C4%B1tlar%C4%B1/egitmenprofilortkursnotu.PNG)<br> <br>
+![](https://github.com/eyupogluuu/MyELearningProject/blob/master/Elearning%20Ekran%20Kay%C4%B1tlar%C4%B1/courseList.PNG)<br> <br>
 **Amaç**
 Online eğitim veren bir sitenin kayıt,sunum ve içerik güncellemesinin dinamik olarak yapılması
 <br>
