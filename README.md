@@ -5,7 +5,6 @@ Bu ASP.NET Core MVC 5 ile geliştirilmiş bir projedir. Projede tüm veriler din
 **Kullanılan Teknolojiler:**<br>
 ASP.NET MVC <br>
 Code First<br>
-Code First Birden Fazla Tablodan Veri Çekme (IENumarable)<br>
 Code First İlişkili Tablolar<br>
 Authentication <br>
 Login  <br>
