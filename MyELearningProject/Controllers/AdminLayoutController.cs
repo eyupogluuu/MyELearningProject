@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MyELearningProject.DAL.Context;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,8 +9,8 @@ namespace MyELearningProject.Controllers
 {
     public class AdminLayoutController : Controller
     {
-        // GET: AdminLayout
-        public ActionResult Index()
+		ELearningContext c = new ELearningContext();
+		public ActionResult Index()
         {
             return View();
         }
@@ -30,7 +31,11 @@ namespace MyELearningProject.Controllers
         }
         public PartialViewResult PartialNavbar()
         {
-            return PartialView();
+			var values = Session["AdminMail"].ToString();
+			ViewBag.mail = Session["AdminMail"];
+			ViewBag.name = c.admins.Where(x => x.adminMail == values.ToString())
+				.Select(y => y.kullaniciAdi).FirstOrDefault();
+			return PartialView();
         }
         public PartialViewResult PartialPageRowTittle()
         {

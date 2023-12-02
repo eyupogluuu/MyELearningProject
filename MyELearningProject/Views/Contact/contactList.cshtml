@@ -1,0 +1,35 @@
+﻿@model List<MyELearningProject.DAL.Entities.Contact>
+
+@{
+    ViewBag.Title = "contactList";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-block">
+                <h2 class="card-header"> Gelen Mesajlar  </h2>
+                <br />
+                <table class=" table table-bordered">
+                    <tr>
+                        
+                        <th> Gönderen </th>
+                        <th> Konu </th>
+                        <th> Mesaj </th>
+                    </tr>
+                    @foreach (var c in Model)
+                    {
+                        <tr>
+                            <td>@c.nameSurname</td>
+                            <td>@c.subject</td>
+                            <td>@c.message</td>
+                        </tr>
+                    }
+                </table>
+                
+            </div>
+        </div>
+    </div>
+</div>
+

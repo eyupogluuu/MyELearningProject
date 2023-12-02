@@ -13,6 +13,11 @@ namespace MyELearningProject.Controllers
     {
         ELearningContext c = new ELearningContext();
 
+        public ActionResult loginHome()
+        {
+            return View();
+        }
+        //öğrenci giriş
         [HttpGet]
         public ActionResult Index()
         {
@@ -21,7 +26,7 @@ namespace MyELearningProject.Controllers
         [HttpPost]
         public ActionResult Index(Student student )
         {
-            var values = c.Students.FirstOrDefault(x => x.smail == student.smail && x.smail == student.smail);
+            var values = c.Students.FirstOrDefault(x => x.smail == student.smail && x.spassword == student.spassword);
             if (values!=null)
             {
                 FormsAuthentication.SetAuthCookie(values.smail, false);
@@ -31,5 +36,25 @@ namespace MyELearningProject.Controllers
             }
             return View();
         }
-    }
+		//admin giriş
+		[HttpGet]
+		public ActionResult admingiris()
+		{
+			return View();
+		}
+		[HttpPost]
+		public ActionResult admingiris(Admin admin)
+		{
+			var values = c.admins.FirstOrDefault(x => x.adminMail == admin.adminMail && x.sifre == admin.sifre);
+			if (values != null)
+			{
+				FormsAuthentication.SetAuthCookie(values.adminMail, false);
+				Session["AdminMail"] = values.adminMail;
+				Session.Timeout = 60;//60 dk sonra sistemden otomatik olarak  çıkış yap
+				return RedirectToAction("Index", "Category");
+			}
+			return View();
+		}
+
+	}
 }
