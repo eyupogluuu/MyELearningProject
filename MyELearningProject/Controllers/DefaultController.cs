@@ -14,7 +14,7 @@ namespace MyELearningProject.Controllers
 		ELearningContext c = new ELearningContext();
 		veriler v = new veriler();
 
-
+		[AllowAnonymous]
 		public ActionResult Index()
 		{
 			return View();

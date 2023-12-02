@@ -55,6 +55,25 @@ namespace MyELearningProject.Controllers
 			}
 			return View();
 		}
+		//instructor giriş
+		[HttpGet]
+		public ActionResult instructorLogin()
+		{
+			return View();
+		}
+		[HttpPost]
+		public ActionResult instructorLogin(Instructor ıns)
+		{
+			var values = c.Instructors.FirstOrDefault(x => x.mail == ıns.mail && x.password == ıns.password);
+			if (values != null)
+			{
+				FormsAuthentication.SetAuthCookie(values.mail, false);
+				Session["InstructorMail"] = values.mail;
+				Session.Timeout = 60;//60 dk sonra sistemden otomatik olarak  çıkış yap
+				return RedirectToAction("Index", "InstructorProfile");
+			}
+			return View();
+		}
 
 	}
 }

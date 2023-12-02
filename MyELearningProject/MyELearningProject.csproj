@@ -137,7 +137,9 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\InstructorAnalysisController.cs" />
     <Compile Include="Controllers\InstructorController.cs" />
+    <Compile Include="Controllers\InstructorProfileController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\PlaylistController.cs" />
     <Compile Include="Controllers\ProfileController.cs" />
     <Compile Include="Controllers\ReviewController.cs" />
     <Compile Include="Controllers\StudentController.cs" />
@@ -287,6 +289,10 @@
     <Compile Include="Migrations\202312021409519_mig_add_adminmail.designer.cs">
       <DependentUpon>202312021409519_mig_add_adminmail.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202312021830321_mig_add_ins_mail_password.cs" />
+    <Compile Include="Migrations\202312021830321_mig_add_ins_mail_password.designer.cs">
+      <DependentUpon>202312021830321_mig_add_ins_mail_password.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -314,6 +320,7 @@
     <Content Include="Login_v16\images\admin.jpg" />
     <Content Include="Login_v16\images\bg-01.jpg" />
     <Content Include="Login_v16\images\icons\favicon.ico" />
+    <Content Include="Login_v16\images\instructor.jpg" />
     <Content Include="Login_v16\images\student.jpg" />
     <Content Include="Login_v16\index.html" />
     <Content Include="Login_v16\js\main.js" />
@@ -1488,10 +1495,18 @@
     <Content Include="Views\Profile\playlist.cshtml" />
     <Content Include="Views\Login\admingiris.cshtml" />
     <Content Include="Views\Contact\contactList.cshtml" />
+    <Content Include="Views\Login\instructorLogin.cshtml" />
+    <Content Include="Views\Shared\_instructorLayout.cshtml" />
+    <Content Include="Views\InstructorProfile\Index.cshtml" />
+    <Content Include="Views\InstructorProfile\myCourseList.cshtml" />
+    <Content Include="Views\InstructorProfile\AddVideo.cshtml" />
+    <Content Include="Views\InstructorProfile\UpdateCourse.cshtml" />
+    <Content Include="Views\InstructorProfile\myStudent.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+    <Folder Include="Views\Playlist\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -1599,6 +1614,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202312021409519_mig_add_adminmail.resx">
       <DependentUpon>202312021409519_mig_add_adminmail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202312021830321_mig_add_ins_mail_password.resx">
+      <DependentUpon>202312021830321_mig_add_ins_mail_password.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

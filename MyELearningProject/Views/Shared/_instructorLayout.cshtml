@@ -3,6 +3,9 @@
     Layout = null;
 }
 
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -94,7 +97,7 @@
                         <!-- Profile -->
                         <!-- ============================================================== -->
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">@ViewBag.name</a>
+                            <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">@ViewBag.instname</a>
                         </li>
                     </ul>
                 </div>
@@ -113,16 +116,17 @@
                 <nav class="sidebar-nav">
                     <ul id="sidebarnav">
                         <li>
-                            <a class="waves-effect waves-dark" href="/Profile/Index/" aria-expanded="false"><i class="mdi mdi-gauge"></i><span class="hide-menu">Profilim</span></a>
+                            <a class="waves-effect waves-dark" href="/InstructorProfile/Index/" aria-expanded="false"><i class="mdi mdi-gauge"></i><span class="hide-menu">Profilim</span></a>
                         </li>
                         <li>
-                            <a class="waves-effect waves-dark" href="/Profile/MyCourseList/" aria-expanded="false"><i class="mdi mdi-account-check"></i><span class="hide-menu">Kurslarım</span></a>
+                            <a class="waves-effect waves-dark" href="/InstructorProfile/MyCourseList/" aria-expanded="false"><i class="mdi mdi-account-check"></i><span class="hide-menu">Kurslarım</span></a>
                         </li>
                         <li>
-                            <a class="waves-effect waves-dark" href="/Review/Addreview/" aria-expanded="false"><i class="mdi mdi-account-check"></i><span class="hide-menu">Puan Ver</span></a>
+                            <a class="waves-effect waves-dark" href="/InstructorProfile/myStudent/" aria-expanded="false"><i class="mdi mdi-account-check"></i><span class="hide-menu">Öğrencilerim</span></a>
                         </li>
+
                     </ul>
-                   
+
                 </nav>
                 <!-- End Sidebar navigation -->
             </div>
@@ -150,15 +154,15 @@
                 <!-- Bread crumb and right sidebar toggle -->
                 <!-- ============================================================== -->
                 @*<div class="row page-titles">
-                    <div class="col-md-5 col-8 align-self-center">
-                        <h3 class="text-themecolor m-b-0 m-t-0">Dashboard</h3>
-                        <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
-                            <li class="breadcrumb-item active">Dashboard</li>
-                        </ol>
-                    </div>
-                    
-                </div>*@ <br /> <br />
+                        <div class="col-md-5 col-8 align-self-center">
+                            <h3 class="text-themecolor m-b-0 m-t-0">Dashboard</h3>
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
+                                <li class="breadcrumb-item active">Dashboard</li>
+                            </ol>
+                        </div>
+
+                    </div>*@ <br /> <br />
                 <!-- ============================================================== -->
                 <!-- End Bread crumb and right sidebar toggle -->
                 <!-- ============================================================== -->
@@ -173,7 +177,7 @@
                             </div>
                         </div>
                     </div>
-                </div> 
+                </div>
                 <!-- ============================================================== -->
                 <!-- End PAge Content -->
                 <!-- ============================================================== -->
@@ -185,7 +189,7 @@
             <!-- footer -->
             <!-- ============================================================== -->
             <footer class="footer">
-                MyElearning 
+                MyElearning
             </footer>
             <!-- ============================================================== -->
             <!-- End footer -->

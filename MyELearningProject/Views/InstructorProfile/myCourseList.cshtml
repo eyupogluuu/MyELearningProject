@@ -1,0 +1,71 @@
+﻿@model List<MyELearningProject.DAL.Entities.Course>
+@{
+    ViewBag.Title = "myCourseList";
+    Layout = "~/Views/Shared/_instructorLayout.cshtml";
+    int count = 0;
+}
+
+
+
+
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-block">
+                <h2 class="card-header"> Kurslarım</h2>
+                <br />
+                <table class=" table table-bordered">
+                    <tr>
+                        <th> # </th>
+                        <th> Kurs Adı </th>
+                        <th> Kategorisi </th>
+                        <th> Süre </th>
+                        <th> Fiyat</th>
+                    
+                        <td>Güncelle</td>
+                        <td>Oynatma Listesi</td>
+                        @if (ViewBag.inscoursecount == 0)
+                        {
+                            <div class="alert alert-info" role="alert">
+                                Henüz Yayınladığınız Bir Kurs Bulunmamaktadır
+                            </div>
+                        }
+                        else
+                        {
+
+
+                        foreach (var c in Model)
+                        {
+                            count++;
+                        <tr>
+                            <td>@count</td>
+                            <td>@c.tittle</td>
+                            <td>@c.price</td>
+                            <td>@c.duration</td>
+                            <td>@c.category.categoryName</td>
+
+                            
+                            <td><a href="/InstructorProfile/UpdateCourse/@c.courseID/" class="btn btn-outline-success">Güncelle</a></td>
+                            <td><a href="/InstructorProfile/AddVideo/@c.courseID" class="btn btn-outline-info">Oynatma Listesi</a></td>
+                        </tr>
+                    }
+                        }
+                    </table>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    @*<br />
+        table
+        <h2>Kurs Listesi</h2>
+
+        {
+            count++;
+            <p>@count- </p>
+
+        }*@
+
+
+
+

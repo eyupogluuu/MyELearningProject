@@ -27,7 +27,14 @@ namespace MyELearningProject.Controllers
                                                    Value=x.courseID.ToString()
                                                }).ToList();
             ViewBag.v = cours;
-            return View();
+			List<SelectListItem> student = (from x in c.Students.ToList()
+										  select new SelectListItem
+										  {
+											  Text = x.sname+ ""+x.ssurname,
+											  Value = x.studentID.ToString()
+										  }).ToList();
+			ViewBag.v2 = student;
+			return View();
         }
 
 		[HttpPost]
@@ -35,7 +42,7 @@ namespace MyELearningProject.Controllers
 		{
             c.Reviews.Add(r);
             c.SaveChanges();
-			return RedirectToAction("reviewList");
+			return RedirectToAction("MyCourseList", "Profile");
 		}
 	}
 }

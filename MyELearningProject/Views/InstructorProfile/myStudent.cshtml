@@ -1,0 +1,28 @@
+﻿@model List<MyELearningProject.DAL.Entities.CourseRegister> 
+@{
+    ViewBag.Title = "myStudent";
+    Layout = "~/Views/Shared/_instructorLayout.cshtml";
+    int count = 0;
+}
+
+
+<h2>Kayıtlı Öğrencilerim</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Ad Soyad</th>
+        <th>Mail</th>
+        <th>Kurs Adı</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        count++;
+        <tr>
+            <td>@count</td>
+            <td>@item.student.sname. @item.student.ssurname</td>
+            <td>@item.student.smail</td>
+            <td>@item.course.tittle</td>
+        </tr>
+    }
+</table>

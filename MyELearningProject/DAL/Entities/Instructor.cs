@@ -13,6 +13,8 @@ namespace MyELearningProject.DAL.Entities
         public string name { get; set; }
         [StringLength(30)]
         public string surname { get; set; }
+        public string mail { get; set; }
+        public string password { get; set; }
         public string imageUrl { get; set; }
         public string tittle { get; set; }
         
