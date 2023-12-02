@@ -26,7 +26,7 @@ SQL Server <br>
 ![](https://github.com/eyupogluuu/MyELearningProject/blob/master/Elearning%20Ekran%20Kay%C4%B1tlar%C4%B1/Elearning%20Ekran%20Kay%C4%B1tlar%C4%B12/contact2.PNG)</br>
 ![](https://github.com/eyupogluuu/MyELearningProject/blob/master/Elearning%20Ekran%20Kay%C4%B1tlar%C4%B1/Elearning%20Ekran%20Kay%C4%B1tlar%C4%B12/gelenmesajlar.PNG)</br>
 ![](https://github.com/eyupogluuu/MyELearningProject/blob/master/Elearning%20Ekran%20Kay%C4%B1tlar%C4%B1/egitmenprofilortkursnotu.PNG)</br>
-![(https://github.com/eyupogluuu/MyELearningProject/blob/master/loginhome.PNG)]
+![](https://github.com/eyupogluuu/MyELearningProject/blob/master/loginhome.PNG)
 
 
 **Amaç**
