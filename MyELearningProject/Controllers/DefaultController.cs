@@ -9,12 +9,13 @@ using System.Web.Mvc;
 
 namespace MyELearningProject.Controllers
 {
+	[AllowAnonymous]
 	public class DefaultController : Controller
 	{
 		ELearningContext c = new ELearningContext();
 		veriler v = new veriler();
 
-		[AllowAnonymous]
+		
 		public ActionResult Index()
 		{
 			return View();

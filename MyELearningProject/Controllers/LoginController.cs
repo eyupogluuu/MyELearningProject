@@ -9,6 +9,7 @@ using MyELearningProject.DAL.Entities;
 
 namespace MyELearningProject.Controllers
 {
+	[AllowAnonymous]
     public class LoginController : Controller
     {
         ELearningContext c = new ELearningContext();
