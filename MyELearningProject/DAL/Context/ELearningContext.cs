@@ -24,5 +24,7 @@ namespace MyELearningProject.DAL.Context
         public DbSet<Review> Reviews { get; set; }
         public DbSet<Process> Processes { get; set; }
         public DbSet<Contact> Contacts { get; set; }
+        public DbSet<Playlist> playlists { get; set; }
+        public DbSet<Admin> admins { get; set; }
     }
 }

@@ -131,18 +131,22 @@
     <Compile Include="Controllers\AdminLayoutController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\CommunucationController.cs" />
+    <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\CourseController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\InstructorAnalysisController.cs" />
     <Compile Include="Controllers\InstructorController.cs" />
+    <Compile Include="Controllers\InstructorProfileController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\PlaylistController.cs" />
     <Compile Include="Controllers\ProfileController.cs" />
     <Compile Include="Controllers\ReviewController.cs" />
     <Compile Include="Controllers\StudentController.cs" />
     <Compile Include="Controllers\TestimonialController.cs" />
     <Compile Include="DAL\Context\ELearningContext.cs" />
     <Compile Include="DAL\Entities\About.cs" />
+    <Compile Include="DAL\Entities\Admin.cs" />
     <Compile Include="DAL\Entities\Adr.cs" />
     <Compile Include="DAL\Entities\Category.cs" />
     <Compile Include="DAL\Entities\Comment.cs" />
@@ -151,6 +155,7 @@
     <Compile Include="DAL\Entities\Course.cs" />
     <Compile Include="DAL\Entities\CourseRegister.cs" />
     <Compile Include="DAL\Entities\Instructor.cs" />
+    <Compile Include="DAL\Entities\Playlist.cs" />
     <Compile Include="DAL\Entities\Process.cs" />
     <Compile Include="DAL\Entities\Review.cs" />
     <Compile Include="DAL\Entities\Service.cs" />
@@ -272,6 +277,22 @@
     <Compile Include="Migrations\202311260100028_mig_add_contact.designer.cs">
       <DependentUpon>202311260100028_mig_add_contact.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202312021310187_mig_add_playlist.cs" />
+    <Compile Include="Migrations\202312021310187_mig_add_playlist.designer.cs">
+      <DependentUpon>202312021310187_mig_add_playlist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202312021408390_mig_add_admin.cs" />
+    <Compile Include="Migrations\202312021408390_mig_add_admin.designer.cs">
+      <DependentUpon>202312021408390_mig_add_admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202312021409519_mig_add_adminmail.cs" />
+    <Compile Include="Migrations\202312021409519_mig_add_adminmail.designer.cs">
+      <DependentUpon>202312021409519_mig_add_adminmail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202312021830321_mig_add_ins_mail_password.cs" />
+    <Compile Include="Migrations\202312021830321_mig_add_ins_mail_password.designer.cs">
+      <DependentUpon>202312021830321_mig_add_ins_mail_password.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -284,6 +305,89 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Login_v16\css\main.css" />
+    <Content Include="Login_v16\css\util.css" />
+    <Content Include="Login_v16\fonts\font-awesome-4.7.0\css\font-awesome.css" />
+    <Content Include="Login_v16\fonts\font-awesome-4.7.0\css\font-awesome.min.css" />
+    <Content Include="Login_v16\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.svg" />
+    <Content Include="Login_v16\fonts\font-awesome-4.7.0\HELP-US-OUT.txt" />
+    <Content Include="Login_v16\fonts\iconic\css\material-design-iconic-font.css" />
+    <Content Include="Login_v16\fonts\iconic\css\material-design-iconic-font.min.css" />
+    <Content Include="Login_v16\fonts\iconic\fonts\Material-Design-Iconic-Font.svg" />
+    <Content Include="Login_v16\fonts\Linearicons-Free-v1.0.0\icon-font.min.css" />
+    <Content Include="Login_v16\fonts\Linearicons-Free-v1.0.0\WebFont\Linearicons-Free.svg" />
+    <Content Include="Login_v16\fonts\ubuntu\UFL.txt" />
+    <Content Include="Login_v16\images\admin.jpg" />
+    <Content Include="Login_v16\images\bg-01.jpg" />
+    <Content Include="Login_v16\images\icons\favicon.ico" />
+    <Content Include="Login_v16\images\instructor.jpg" />
+    <Content Include="Login_v16\images\student.jpg" />
+    <Content Include="Login_v16\index.html" />
+    <Content Include="Login_v16\js\main.js" />
+    <Content Include="Login_v16\vendor\animate\animate.css" />
+    <Content Include="Login_v16\vendor\animsition\css\animsition.css" />
+    <Content Include="Login_v16\vendor\animsition\css\animsition.min.css" />
+    <Content Include="Login_v16\vendor\animsition\js\animsition.js" />
+    <Content Include="Login_v16\vendor\animsition\js\animsition.min.js" />
+    <Content Include="Login_v16\vendor\bootstrap\css\bootstrap-grid.css" />
+    <Content Include="Login_v16\vendor\bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="Login_v16\vendor\bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="Login_v16\vendor\bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Include="Login_v16\vendor\bootstrap\css\bootstrap.css" />
+    <Content Include="Login_v16\vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Login_v16\vendor\bootstrap\js\bootstrap.js" />
+    <Content Include="Login_v16\vendor\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Login_v16\vendor\bootstrap\js\popper.js" />
+    <Content Include="Login_v16\vendor\bootstrap\js\popper.min.js" />
+    <Content Include="Login_v16\vendor\bootstrap\js\tooltip.js" />
+    <Content Include="Login_v16\vendor\countdowntime\countdowntime.js" />
+    <Content Include="Login_v16\vendor\css-hamburgers\hamburgers.css" />
+    <Content Include="Login_v16\vendor\css-hamburgers\hamburgers.min.css" />
+    <Content Include="Login_v16\vendor\daterangepicker\daterangepicker.css" />
+    <Content Include="Login_v16\vendor\daterangepicker\daterangepicker.js" />
+    <Content Include="Login_v16\vendor\daterangepicker\moment.js" />
+    <Content Include="Login_v16\vendor\daterangepicker\moment.min.js" />
+    <Content Include="Login_v16\vendor\jquery\jquery-3.2.1.min.js" />
+    <Content Include="Login_v16\vendor\perfect-scrollbar\perfect-scrollbar.css" />
+    <Content Include="Login_v16\vendor\perfect-scrollbar\perfect-scrollbar.min.js" />
+    <Content Include="Login_v16\vendor\select2\select2.css" />
+    <Content Include="Login_v16\vendor\select2\select2.js" />
+    <Content Include="Login_v16\vendor\select2\select2.min.css" />
+    <Content Include="Login_v16\vendor\select2\select2.min.js" />
+    <Content Include="Login_v1\css\main.css" />
+    <Content Include="Login_v1\css\util.css" />
+    <Content Include="Login_v1\fonts\font-awesome-4.7.0\css\font-awesome.css" />
+    <Content Include="Login_v1\fonts\font-awesome-4.7.0\css\font-awesome.min.css" />
+    <Content Include="Login_v1\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.svg" />
+    <Content Include="Login_v1\fonts\font-awesome-4.7.0\HELP-US-OUT.txt" />
+    <Content Include="Login_v1\fonts\montserrat\OFL.txt" />
+    <Content Include="Login_v1\images\admin.png" />
+    <Content Include="Login_v1\images\icons\favicon.ico" />
+    <Content Include="Login_v1\images\img-01.png" />
+    <Content Include="Login_v1\images\instructor.png" />
+    <Content Include="Login_v1\images\student.png" />
+    <Content Include="Login_v1\index.html" />
+    <Content Include="Login_v1\js\main.js" />
+    <Content Include="Login_v1\vendor\animate\animate.css" />
+    <Content Include="Login_v1\vendor\bootstrap\css\bootstrap-grid.css" />
+    <Content Include="Login_v1\vendor\bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="Login_v1\vendor\bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="Login_v1\vendor\bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Include="Login_v1\vendor\bootstrap\css\bootstrap.css" />
+    <Content Include="Login_v1\vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Login_v1\vendor\bootstrap\js\bootstrap.js" />
+    <Content Include="Login_v1\vendor\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Login_v1\vendor\bootstrap\js\popper.js" />
+    <Content Include="Login_v1\vendor\bootstrap\js\popper.min.js" />
+    <Content Include="Login_v1\vendor\bootstrap\js\tooltip.js" />
+    <Content Include="Login_v1\vendor\css-hamburgers\hamburgers.css" />
+    <Content Include="Login_v1\vendor\css-hamburgers\hamburgers.min.css" />
+    <Content Include="Login_v1\vendor\jquery\jquery-3.2.1.min.js" />
+    <Content Include="Login_v1\vendor\select2\select2.css" />
+    <Content Include="Login_v1\vendor\select2\select2.js" />
+    <Content Include="Login_v1\vendor\select2\select2.min.css" />
+    <Content Include="Login_v1\vendor\select2\select2.min.js" />
+    <Content Include="Login_v1\vendor\tilt\tilt.jquery.min.js" />
     <Content Include="Login_v5\css\main.css" />
     <Content Include="Login_v5\css\util.css" />
     <Content Include="Login_v5\fonts\font-awesome-4.7.0\css\font-awesome.css" />
@@ -411,6 +515,154 @@
     <Content Include="Login_v5\vendor\bootstrap\css\bootstrap-reboot.min.css.map" />
     <Content Include="Login_v5\vendor\bootstrap\css\bootstrap.css.map" />
     <Content Include="Login_v5\vendor\bootstrap\css\bootstrap.min.css.map" />
+    <Content Include="Login_v16\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.eot" />
+    <Content Include="Login_v16\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Login_v16\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.woff" />
+    <Content Include="Login_v16\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Login_v16\fonts\font-awesome-4.7.0\fonts\FontAwesome.otf" />
+    <Content Include="Login_v16\fonts\font-awesome-4.7.0\less\animated.less" />
+    <Content Include="Login_v16\fonts\font-awesome-4.7.0\less\bordered-pulled.less" />
+    <Content Include="Login_v16\fonts\font-awesome-4.7.0\less\core.less" />
+    <Content Include="Login_v16\fonts\font-awesome-4.7.0\less\fixed-width.less" />
+    <Content Include="Login_v16\fonts\font-awesome-4.7.0\less\font-awesome.less" />
+    <Content Include="Login_v16\fonts\font-awesome-4.7.0\less\icons.less" />
+    <Content Include="Login_v16\fonts\font-awesome-4.7.0\less\larger.less" />
+    <Content Include="Login_v16\fonts\font-awesome-4.7.0\less\list.less" />
+    <Content Include="Login_v16\fonts\font-awesome-4.7.0\less\mixins.less" />
+    <Content Include="Login_v16\fonts\font-awesome-4.7.0\less\path.less" />
+    <Content Include="Login_v16\fonts\font-awesome-4.7.0\less\rotated-flipped.less" />
+    <Content Include="Login_v16\fonts\font-awesome-4.7.0\less\screen-reader.less" />
+    <Content Include="Login_v16\fonts\font-awesome-4.7.0\less\stacked.less" />
+    <Content Include="Login_v16\fonts\font-awesome-4.7.0\less\variables.less" />
+    <Content Include="Login_v16\fonts\font-awesome-4.7.0\scss\font-awesome.scss" />
+    <Content Include="Login_v16\fonts\font-awesome-4.7.0\scss\_animated.scss" />
+    <Content Include="Login_v16\fonts\font-awesome-4.7.0\scss\_bordered-pulled.scss" />
+    <Content Include="Login_v16\fonts\font-awesome-4.7.0\scss\_core.scss" />
+    <Content Include="Login_v16\fonts\font-awesome-4.7.0\scss\_fixed-width.scss" />
+    <Content Include="Login_v16\fonts\font-awesome-4.7.0\scss\_icons.scss" />
+    <Content Include="Login_v16\fonts\font-awesome-4.7.0\scss\_larger.scss" />
+    <Content Include="Login_v16\fonts\font-awesome-4.7.0\scss\_list.scss" />
+    <Content Include="Login_v16\fonts\font-awesome-4.7.0\scss\_mixins.scss" />
+    <Content Include="Login_v16\fonts\font-awesome-4.7.0\scss\_path.scss" />
+    <Content Include="Login_v16\fonts\font-awesome-4.7.0\scss\_rotated-flipped.scss" />
+    <Content Include="Login_v16\fonts\font-awesome-4.7.0\scss\_screen-reader.scss" />
+    <Content Include="Login_v16\fonts\font-awesome-4.7.0\scss\_stacked.scss" />
+    <Content Include="Login_v16\fonts\font-awesome-4.7.0\scss\_variables.scss" />
+    <Content Include="Login_v16\fonts\iconic\fonts\Material-Design-Iconic-Font.eot" />
+    <Content Include="Login_v16\fonts\iconic\fonts\Material-Design-Iconic-Font.ttf" />
+    <Content Include="Login_v16\fonts\iconic\fonts\Material-Design-Iconic-Font.woff" />
+    <Content Include="Login_v16\fonts\iconic\fonts\Material-Design-Iconic-Font.woff2" />
+    <Content Include="Login_v16\fonts\Linearicons-Free-v1.0.0\WebFont\Linearicons-Free.eot" />
+    <Content Include="Login_v16\fonts\Linearicons-Free-v1.0.0\WebFont\Linearicons-Free.ttf" />
+    <Content Include="Login_v16\fonts\Linearicons-Free-v1.0.0\WebFont\Linearicons-Free.woff" />
+    <Content Include="Login_v16\fonts\Linearicons-Free-v1.0.0\WebFont\Linearicons-Free.woff2" />
+    <Content Include="Login_v16\fonts\poppins\Poppins-Black.ttf" />
+    <Content Include="Login_v16\fonts\poppins\Poppins-BlackItalic.ttf" />
+    <Content Include="Login_v16\fonts\poppins\Poppins-Bold.ttf" />
+    <Content Include="Login_v16\fonts\poppins\Poppins-BoldItalic.ttf" />
+    <Content Include="Login_v16\fonts\poppins\Poppins-ExtraBold.ttf" />
+    <Content Include="Login_v16\fonts\poppins\Poppins-ExtraBoldItalic.ttf" />
+    <Content Include="Login_v16\fonts\poppins\Poppins-ExtraLight.ttf" />
+    <Content Include="Login_v16\fonts\poppins\Poppins-ExtraLightItalic.ttf" />
+    <Content Include="Login_v16\fonts\poppins\Poppins-Italic.ttf" />
+    <Content Include="Login_v16\fonts\poppins\Poppins-Light.ttf" />
+    <Content Include="Login_v16\fonts\poppins\Poppins-LightItalic.ttf" />
+    <Content Include="Login_v16\fonts\poppins\Poppins-Medium.ttf" />
+    <Content Include="Login_v16\fonts\poppins\Poppins-MediumItalic.ttf" />
+    <Content Include="Login_v16\fonts\poppins\Poppins-Regular.ttf" />
+    <Content Include="Login_v16\fonts\poppins\Poppins-SemiBold.ttf" />
+    <Content Include="Login_v16\fonts\poppins\Poppins-SemiBoldItalic.ttf" />
+    <Content Include="Login_v16\fonts\poppins\Poppins-Thin.ttf" />
+    <Content Include="Login_v16\fonts\poppins\Poppins-ThinItalic.ttf" />
+    <Content Include="Login_v16\fonts\ubuntu\Ubuntu-Bold.ttf" />
+    <Content Include="Login_v16\fonts\ubuntu\Ubuntu-BoldItalic.ttf" />
+    <Content Include="Login_v16\fonts\ubuntu\Ubuntu-Italic.ttf" />
+    <Content Include="Login_v16\fonts\ubuntu\Ubuntu-Light.ttf" />
+    <Content Include="Login_v16\fonts\ubuntu\Ubuntu-LightItalic.ttf" />
+    <Content Include="Login_v16\fonts\ubuntu\Ubuntu-Medium.ttf" />
+    <Content Include="Login_v16\fonts\ubuntu\Ubuntu-MediumItalic.ttf" />
+    <Content Include="Login_v16\fonts\ubuntu\Ubuntu-Regular.ttf" />
+    <Content Include="Login_v16\vendor\bootstrap\css\bootstrap-grid.css.map" />
+    <Content Include="Login_v16\vendor\bootstrap\css\bootstrap-grid.min.css.map" />
+    <Content Include="Login_v16\vendor\bootstrap\css\bootstrap-reboot.css.map" />
+    <Content Include="Login_v16\vendor\bootstrap\css\bootstrap-reboot.min.css.map" />
+    <Content Include="Login_v16\vendor\bootstrap\css\bootstrap.css.map" />
+    <Content Include="Login_v16\vendor\bootstrap\css\bootstrap.min.css.map" />
+    <Content Include="Login_v1\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.eot" />
+    <Content Include="Login_v1\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Login_v1\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.woff" />
+    <Content Include="Login_v1\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Login_v1\fonts\font-awesome-4.7.0\fonts\FontAwesome.otf" />
+    <Content Include="Login_v1\fonts\font-awesome-4.7.0\less\animated.less" />
+    <Content Include="Login_v1\fonts\font-awesome-4.7.0\less\bordered-pulled.less" />
+    <Content Include="Login_v1\fonts\font-awesome-4.7.0\less\core.less" />
+    <Content Include="Login_v1\fonts\font-awesome-4.7.0\less\fixed-width.less" />
+    <Content Include="Login_v1\fonts\font-awesome-4.7.0\less\font-awesome.less" />
+    <Content Include="Login_v1\fonts\font-awesome-4.7.0\less\icons.less" />
+    <Content Include="Login_v1\fonts\font-awesome-4.7.0\less\larger.less" />
+    <Content Include="Login_v1\fonts\font-awesome-4.7.0\less\list.less" />
+    <Content Include="Login_v1\fonts\font-awesome-4.7.0\less\mixins.less" />
+    <Content Include="Login_v1\fonts\font-awesome-4.7.0\less\path.less" />
+    <Content Include="Login_v1\fonts\font-awesome-4.7.0\less\rotated-flipped.less" />
+    <Content Include="Login_v1\fonts\font-awesome-4.7.0\less\screen-reader.less" />
+    <Content Include="Login_v1\fonts\font-awesome-4.7.0\less\stacked.less" />
+    <Content Include="Login_v1\fonts\font-awesome-4.7.0\less\variables.less" />
+    <Content Include="Login_v1\fonts\font-awesome-4.7.0\scss\font-awesome.scss" />
+    <Content Include="Login_v1\fonts\font-awesome-4.7.0\scss\_animated.scss" />
+    <Content Include="Login_v1\fonts\font-awesome-4.7.0\scss\_bordered-pulled.scss" />
+    <Content Include="Login_v1\fonts\font-awesome-4.7.0\scss\_core.scss" />
+    <Content Include="Login_v1\fonts\font-awesome-4.7.0\scss\_fixed-width.scss" />
+    <Content Include="Login_v1\fonts\font-awesome-4.7.0\scss\_icons.scss" />
+    <Content Include="Login_v1\fonts\font-awesome-4.7.0\scss\_larger.scss" />
+    <Content Include="Login_v1\fonts\font-awesome-4.7.0\scss\_list.scss" />
+    <Content Include="Login_v1\fonts\font-awesome-4.7.0\scss\_mixins.scss" />
+    <Content Include="Login_v1\fonts\font-awesome-4.7.0\scss\_path.scss" />
+    <Content Include="Login_v1\fonts\font-awesome-4.7.0\scss\_rotated-flipped.scss" />
+    <Content Include="Login_v1\fonts\font-awesome-4.7.0\scss\_screen-reader.scss" />
+    <Content Include="Login_v1\fonts\font-awesome-4.7.0\scss\_stacked.scss" />
+    <Content Include="Login_v1\fonts\font-awesome-4.7.0\scss\_variables.scss" />
+    <Content Include="Login_v1\fonts\montserrat\Montserrat-Black.ttf" />
+    <Content Include="Login_v1\fonts\montserrat\Montserrat-BlackItalic.ttf" />
+    <Content Include="Login_v1\fonts\montserrat\Montserrat-Bold.ttf" />
+    <Content Include="Login_v1\fonts\montserrat\Montserrat-BoldItalic.ttf" />
+    <Content Include="Login_v1\fonts\montserrat\Montserrat-ExtraBold.ttf" />
+    <Content Include="Login_v1\fonts\montserrat\Montserrat-ExtraBoldItalic.ttf" />
+    <Content Include="Login_v1\fonts\montserrat\Montserrat-ExtraLight.ttf" />
+    <Content Include="Login_v1\fonts\montserrat\Montserrat-ExtraLightItalic.ttf" />
+    <Content Include="Login_v1\fonts\montserrat\Montserrat-Italic.ttf" />
+    <Content Include="Login_v1\fonts\montserrat\Montserrat-Light.ttf" />
+    <Content Include="Login_v1\fonts\montserrat\Montserrat-LightItalic.ttf" />
+    <Content Include="Login_v1\fonts\montserrat\Montserrat-Medium.ttf" />
+    <Content Include="Login_v1\fonts\montserrat\Montserrat-MediumItalic.ttf" />
+    <Content Include="Login_v1\fonts\montserrat\Montserrat-Regular.ttf" />
+    <Content Include="Login_v1\fonts\montserrat\Montserrat-SemiBold.ttf" />
+    <Content Include="Login_v1\fonts\montserrat\Montserrat-SemiBoldItalic.ttf" />
+    <Content Include="Login_v1\fonts\montserrat\Montserrat-Thin.ttf" />
+    <Content Include="Login_v1\fonts\montserrat\Montserrat-ThinItalic.ttf" />
+    <Content Include="Login_v1\fonts\poppins\Poppins-Black.ttf" />
+    <Content Include="Login_v1\fonts\poppins\Poppins-BlackItalic.ttf" />
+    <Content Include="Login_v1\fonts\poppins\Poppins-Bold.ttf" />
+    <Content Include="Login_v1\fonts\poppins\Poppins-BoldItalic.ttf" />
+    <Content Include="Login_v1\fonts\poppins\Poppins-ExtraBold.ttf" />
+    <Content Include="Login_v1\fonts\poppins\Poppins-ExtraBoldItalic.ttf" />
+    <Content Include="Login_v1\fonts\poppins\Poppins-ExtraLight.ttf" />
+    <Content Include="Login_v1\fonts\poppins\Poppins-ExtraLightItalic.ttf" />
+    <Content Include="Login_v1\fonts\poppins\Poppins-Italic.ttf" />
+    <Content Include="Login_v1\fonts\poppins\Poppins-Light.ttf" />
+    <Content Include="Login_v1\fonts\poppins\Poppins-LightItalic.ttf" />
+    <Content Include="Login_v1\fonts\poppins\Poppins-Medium.ttf" />
+    <Content Include="Login_v1\fonts\poppins\Poppins-MediumItalic.ttf" />
+    <Content Include="Login_v1\fonts\poppins\Poppins-Regular.ttf" />
+    <Content Include="Login_v1\fonts\poppins\Poppins-SemiBold.ttf" />
+    <Content Include="Login_v1\fonts\poppins\Poppins-SemiBoldItalic.ttf" />
+    <Content Include="Login_v1\fonts\poppins\Poppins-Thin.ttf" />
+    <Content Include="Login_v1\fonts\poppins\Poppins-ThinItalic.ttf" />
+    <Content Include="Login_v1\vendor\bootstrap\css\bootstrap-grid.css.map" />
+    <Content Include="Login_v1\vendor\bootstrap\css\bootstrap-grid.min.css.map" />
+    <Content Include="Login_v1\vendor\bootstrap\css\bootstrap-reboot.css.map" />
+    <Content Include="Login_v1\vendor\bootstrap\css\bootstrap-reboot.min.css.map" />
+    <Content Include="Login_v1\vendor\bootstrap\css\bootstrap.css.map" />
+    <Content Include="Login_v1\vendor\bootstrap\css\bootstrap.min.css.map" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -1237,10 +1489,24 @@
     <Content Include="v2.3.2\jquery.rateyo.min.js.map" />
     <Content Include="Views\Shared\_StudentLayout.cshtml" />
     <Content Include="Views\Default\partialContact2.cshtml" />
+    <Content Include="Views\Login\loginHome.cshtml" />
+    <Content Include="Views\Profile\myInfo.cshtml" />
+    <Content Include="Views\Profile\courseDetails.cshtml" />
+    <Content Include="Views\Profile\playlist.cshtml" />
+    <Content Include="Views\Login\admingiris.cshtml" />
+    <Content Include="Views\Contact\contactList.cshtml" />
+    <Content Include="Views\Login\instructorLogin.cshtml" />
+    <Content Include="Views\Shared\_instructorLayout.cshtml" />
+    <Content Include="Views\InstructorProfile\Index.cshtml" />
+    <Content Include="Views\InstructorProfile\myCourseList.cshtml" />
+    <Content Include="Views\InstructorProfile\AddVideo.cshtml" />
+    <Content Include="Views\InstructorProfile\UpdateCourse.cshtml" />
+    <Content Include="Views\InstructorProfile\myStudent.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+    <Folder Include="Views\Playlist\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -1339,6 +1605,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202311260100028_mig_add_contact.resx">
       <DependentUpon>202311260100028_mig_add_contact.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202312021310187_mig_add_playlist.resx">
+      <DependentUpon>202312021310187_mig_add_playlist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202312021408390_mig_add_admin.resx">
+      <DependentUpon>202312021408390_mig_add_admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202312021409519_mig_add_adminmail.resx">
+      <DependentUpon>202312021409519_mig_add_adminmail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202312021830321_mig_add_ins_mail_password.resx">
+      <DependentUpon>202312021830321_mig_add_ins_mail_password.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

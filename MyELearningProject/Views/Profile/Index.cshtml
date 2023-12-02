@@ -1,10 +1,22 @@
 ﻿
 @{
-    Layout = "~/Views/Shared/_StudentLayout.cshtml"; 
+    Layout = "~/Views/Shared/_StudentLayout.cshtml";
 }
 
-<h3>Profil sayfası</h3>
+<h2>Bilgilerim</h2>
 <br />
-<h4> Mail Adresi @ViewBag.mail.</h4>
-<br />
-<h4> hoşgeldiniz @ViewBag.name.</h4>
+<table class="table table-bordered">
+    <tr>
+        <td> Öğrenci Adı Soyadı</td>        
+        <td> Öğrenci  Mail</td>
+        
+    </tr>
+
+
+    <tr>
+        <td>@ViewBag.name</td>
+        <td>@ViewBag.mail</td>
+
+    </tr>
+
+</table>

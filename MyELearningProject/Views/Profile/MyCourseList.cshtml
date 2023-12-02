@@ -15,6 +15,10 @@
                     <tr>
                         <th> # </th>
                         <th> Kurs Adı </th>
+                        <th> Kategorisi </th>
+                        <th> Süre </th>
+                        <th> Fiyat</th>
+                        <td>Kursu İzle</td>
 
                         @foreach (var p in Model)
                         {
@@ -22,8 +26,10 @@
                         <tr>
                             <td>@count</td>
                             <td>@p.course.tittle</td>
-
-
+                            <td>@p.course.category.categoryName</td>
+                            <td>@p.course.duration</td>
+                            <td>@p.course.price</td>
+                            <td><a href="/Profile/playlist/@p.courseID/" class="btn btn-outline-info">Kursu İzle</a></td>
                         </tr>
                     }
                     </table>
