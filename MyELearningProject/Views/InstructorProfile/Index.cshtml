@@ -1,24 +1,31 @@
-﻿
+﻿@model MyELearningProject.DAL.Entities.Instructor
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_instructorLayout.cshtml";
 }
 
-<h2>Bilgilerim</h2>
-<br />
-<table class="table table-bordered">
-    <tr>
-        <td> Eğitmen Adı Soyadı</td>
-        <td> Eğitmen  Mail</td>
 
-    </tr>
+<form method="post">
+    <input type="hidden" name="instructorID" value="@Model.instructorID" />
+    <label> Eğitmen Adı:</label>
+    <input type="text" name="name" value="@Model.name" class="form-control" />
+    <br /><br />
+    <label> Eğitmen Soyadı:</label>
+    <input type="text" name="surname" value="@Model.surname" class="form-control" />
+    <br /><br />
+    <label>Title:</label>
+    <input type="text" name="tittle" value="@Model.tittle" class="form-control" />
+    <br /><br />
+    <label> Eğitmen Görsel:</label>
+    <input type="text" name="imageUrl" value="@Model.imageUrl" class="form-control" />
+    <br /><br />
+    <label>Mail:</label>
+    <input type="text" name="mail" value="@Model.mail" class="form-control" />
+    <br /><br />
+    <label>Şifre:</label>
+    <input type="text" name="password" value="@Model.password" class="form-control" />
+    <br /><br />
 
-
-    <tr>
-        <td>@ViewBag.instname</td>
-        <td>@ViewBag.mail</td>
-
-    </tr>
-
-</table>
+    <button class="btn-primary">Kaydet</button>
+</form>
 

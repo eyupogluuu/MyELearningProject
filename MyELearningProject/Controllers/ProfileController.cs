@@ -11,13 +11,27 @@ namespace MyELearningProject.Controllers
 	public class ProfileController : Controller
 	{
 		ELearningContext c = new ELearningContext();
-		public ActionResult Index()
+		[HttpGet]
+		public ActionResult Index(int id=0)
 		{
 			var values = Session["CurrentMail"].ToString();
 			ViewBag.mail = Session["CurrentMail"];
 			ViewBag.name = c.Students.Where(x => x.smail == values.ToString())
 				.Select(y => y.sname + " " + y.ssurname).FirstOrDefault();
-			return View();
+			id=c.Students.Where(x=>x.smail==values).Select(y=>y.studentID).FirstOrDefault();
+			var stu = c.Students.Find(id);
+			return View(stu);
+		}
+		[HttpPost]
+		public ActionResult Index(Student stu)
+		{
+			var values = c.Students.Find(stu.studentID);
+			values.sname = stu.sname;
+			values.ssurname = stu.ssurname;
+			values.smail = stu.smail;
+			values.spassword = stu.spassword;
+			c.SaveChanges();
+			return RedirectToAction("Index");
 		}
 
 		public ActionResult MyCourseList()

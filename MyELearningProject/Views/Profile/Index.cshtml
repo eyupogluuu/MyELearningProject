@@ -1,22 +1,28 @@
-﻿
+﻿@model MyELearningProject.DAL.Entities.Student
 @{
     Layout = "~/Views/Shared/_StudentLayout.cshtml";
 }
 
-<h2>Bilgilerim</h2>
-<br />
-<table class="table table-bordered">
-    <tr>
-        <td> Öğrenci Adı Soyadı</td>        
-        <td> Öğrenci  Mail</td>
-        
-    </tr>
 
 
-    <tr>
-        <td>@ViewBag.name</td>
-        <td>@ViewBag.mail</td>
+@using (Html.BeginForm("Index", "Profile", FormMethod.Post))
+    {
+  
+    @Html.HiddenFor(x => x.studentID, new { @class = "form-control" })
+    <br />
+    <label>Öğrenci Adı:</label>
+    @Html.TextBoxFor(x => x.sname, new { @class = "form-control" })
+    <br /><br />
+    <label>Öğrenci Soyadı:</label>
+    @Html.TextBoxFor(x => x.ssurname, new { @class = "form-control" })
+    <br /><br />
+    <label>Öğrenci Mail:</label>
+    @Html.TextBoxFor(x => x.smail, new { @class = "form-control" })
+    <br /><br />
+    <label>Öğrenci Şifre:</label>
+    @Html.TextBoxFor(x => x.spassword, new { @class = "form-control" })
+    <br /><br />
+    <button class="btn-primary">Kaydet</button>
 
-    </tr>
 
-</table>
+}
