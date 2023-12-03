@@ -19,10 +19,12 @@ SQL Server <br>
 ![](https://github.com/eyupogluuu/MyELearningProject/blob/master/Elearning%20Ekran%20Kay%C4%B1tlar%C4%B1/Elearning%20Ekran%20Kay%C4%B1tlar%C4%B12/serv.PNG)</br>
 ![](https://github.com/eyupogluuu/MyELearningProject/blob/master/Elearning%20Ekran%20Kay%C4%B1tlar%C4%B1/Elearning%20Ekran%20Kay%C4%B1tlar%C4%B12/testimonial.PNG)</br>
 ![](https://github.com/eyupogluuu/MyELearningProject/blob/master/Elearning%20Ekran%20Kay%C4%B1tlar%C4%B1/Elearning%20Ekran%20Kay%C4%B1tlar%C4%B12/ogrencilerim.PNG)</br>
+![](https://github.com/eyupogluuu/MyELearningProject/blob/master/egitmenbilgiguncelle.PNG)</br>
 ![](https://github.com/eyupogluuu/MyELearningProject/blob/master/Elearning%20Ekran%20Kay%C4%B1tlar%C4%B1/Elearning%20Ekran%20Kay%C4%B1tlar%C4%B12/kurslarımm.PNG)</br>
 ![](https://github.com/eyupogluuu/MyELearningProject/blob/master/Elearning%20Ekran%20Kay%C4%B1tlar%C4%B1/Elearning%20Ekran%20Kay%C4%B1tlar%C4%B12/kursumguncelle.PNG)</br>
 ![](https://github.com/eyupogluuu/MyELearningProject/blob/master/Elearning%20Ekran%20Kay%C4%B1tlar%C4%B1/Elearning%20Ekran%20Kay%C4%B1tlar%C4%B12/playlistayarları.PNG)</br>
 ![](https://github.com/eyupogluuu/MyELearningProject/blob/master/Elearning%20Ekran%20Kay%C4%B1tlar%C4%B1/Elearning%20Ekran%20Kay%C4%B1tlar%C4%B12/point2.PNG)</br>
+![](https://github.com/eyupogluuu/MyELearningProject/blob/master/elearningbilgiguncelle.PNG)</br>
 ![](https://github.com/eyupogluuu/MyELearningProject/blob/master/Elearning%20Ekran%20Kay%C4%B1tlar%C4%B1/Elearning%20Ekran%20Kay%C4%B1tlar%C4%B12/contact2.PNG)</br>
 ![](https://github.com/eyupogluuu/MyELearningProject/blob/master/Elearning%20Ekran%20Kay%C4%B1tlar%C4%B1/Elearning%20Ekran%20Kay%C4%B1tlar%C4%B12/gelenmesajlar.PNG)</br>
 ![](https://github.com/eyupogluuu/MyELearningProject/blob/master/Elearning%20Ekran%20Kay%C4%B1tlar%C4%B1/egitmenprofilortkursnotu.PNG)</br>
