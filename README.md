@@ -7,8 +7,6 @@ ASP.NET MVC <br>
 Code First<br>
 Code First İlişkili Tablolar<br>
 Authentication <br>
-Login  <br>
-SignIn<br>
 Crud İşlemleri <br>
 Entity Framework <br>
 SQL Server <br>
